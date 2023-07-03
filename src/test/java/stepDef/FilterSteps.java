@@ -19,24 +19,21 @@ public class FilterSteps {
     }
 
     @When("User sort product list by {string}")
-    public void selectProductSort(String sort) throws InterruptedException {
+    public void selectProductSort(String sort) {
         FilterPage filterpage = new FilterPage(webDriver);
         filterpage.selectProductFilter(sort);
-        Thread.sleep(2000);
     }
 
     @Then("User already on sales page")
-    public void VerifyDashboard() throws InterruptedException {
+    public void VerifyDashboard() {
         LoginPage loginPage = new LoginPage(webDriver);
         Assert.assertTrue(loginPage.verDashboard());
-        Thread.sleep(2000);
     }
 
     @Then("User already on filter result")
-    public void ResultFilter() throws InterruptedException {
+    public void ResultFilter() {
         FilterPage filterpage = new FilterPage(webDriver);
         Assert.assertTrue(filterpage.resultFilter());
-        Thread.sleep(2000);
     }
 
 }
