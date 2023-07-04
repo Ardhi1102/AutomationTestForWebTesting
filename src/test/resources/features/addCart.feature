@@ -1,5 +1,6 @@
 @AddCart
 Feature: Add to Cart
+  As a user I want add T shirt Red and sauce onesie to cart
 
   Scenario: Add product to cart
     #Precondition
@@ -14,10 +15,8 @@ Feature: Add to Cart
     Then User already on filter result
 
     #Step(add to cart)
-    And User Click Add T Shirt Red
+    When User Click Add T Shirt Red
     And User Click Add Sauce Onesie
     And User Click Container
     And User Click Remove T Shirt Red
-
-    #Expected
     Then User can view added cart

@@ -1,5 +1,6 @@
 @Checkout
 Feature: Check out product
+  As a user I want to buy T Shirt Red
 
   Scenario: Success to checkout
     #Precondition
