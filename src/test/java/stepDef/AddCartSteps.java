@@ -2,6 +2,7 @@ package stepDef;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageObject.AddCartPage;
@@ -13,7 +14,7 @@ public class AddCartSteps {
         this.webDriver = Hooks.webDriver;
     }
 
-    @And("User Click Add T Shirt Red")
+    @When("User Click Add T Shirt Red")
     public void clickAddRedShirt() {
         AddCartPage addCartPage = new AddCartPage(webDriver);
         addCartPage.clickAddCartShirtRed();

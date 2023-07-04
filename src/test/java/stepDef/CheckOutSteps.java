@@ -42,7 +42,7 @@ public class CheckOutSteps {
         Assert.assertTrue(checkOutPage.checkOutOverview());
     }
 
-    @And("User click finish")
+    @When("User click finish")
     public void clickFinish() {
         CheckOutPage checkOutPage = new CheckOutPage(webDriver);
         checkOutPage.clickbtnFinish();
@@ -54,7 +54,7 @@ public class CheckOutSteps {
         Assert.assertTrue(checkOutPage.checkOutComplete());
     }
 
-    @Then("Verify item price equals with item total")
+    @And("Verify item price equals with item total")
     public void verifyPrice() {
         CheckOutPage checkOutPage = new CheckOutPage(webDriver);
         Assert.assertEquals(checkOutPage.viewItemPrice(),checkOutPage.viewItemTotal(), 0);
@@ -66,7 +66,7 @@ public class CheckOutSteps {
         Assert.assertEquals(checkOutPage.viewItemTotal() + checkOutPage.viewTax(), checkOutPage.viewTotalPayment(), 0);
     }
 
-    @And("User Click Burger Button")
+    @When("User Click Burger Button")
     public void clickBurger() throws InterruptedException {
         CheckOutPage checkOutPage = new CheckOutPage(webDriver);
         checkOutPage.clickbtnBurger();
